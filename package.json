@@ -1,0 +1,50 @@
+{
+  "name": "eslint-config-energysage",
+  "version": "0.1.1",
+  "publishConfig": {
+    "registry": "http://localhost:8081/repository/npm-private/"
+  },
+  "description": "EnergySage's ESLint config, following Airbnb's styleguide",
+  "main": "index.js",
+  "scripts": {
+    "prelint": "editorconfig-tools check * rules/*",
+    "lint": "eslint .",
+    "prepublish": "(in-install || eslint-find-rules --unused) && safe-publish-latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyanMulready/eslint-config-energysage"
+  },
+  "keywords": [],
+  "author": "Ryan Mulready",
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RyanMulready/eslint-config-energysage/issues"
+  },
+  "homepage": "https://github.com/RyanMulready/eslint-config-energysage",
+  "dependencies": {
+    "eslint-config-airbnb-base": "^13.1.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "babel-preset-airbnb": "^2.5.3",
+    "babel-tape-runner": "^2.0.1",
+    "editorconfig-tools": "^0.1.1",
+    "eslint": "^4.19.1 || ^5.3.0",
+    "eslint-find-rules": "^3.3.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "eslint-plugin-vue-a11y": "^0.0.26",
+    "in-publish": "^2.0.0",
+    "safe-publish-latest": "^1.1.2",
+    "tape": "^4.9.1"
+  },
+  "peerDependencies": {
+    "eslint": "^4.19.1 || ^5.6.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "engines": {
+    "node": ">= 4"
+  }
+}
